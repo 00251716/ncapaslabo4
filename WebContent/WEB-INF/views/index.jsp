@@ -92,33 +92,33 @@
 
 <div class="form-style-2">
 	<div class="form-style-2-heading"> Ingrese los detalles del producto </div>
-	<form:form action="${pageContext.request.contextPath}/formData" method="POST" modelAttribute="user">
+	<form:form action="${pageContext.request.contextPath}/formData" method="POST" modelAttribute="product">
 	
 		<label><span>Nombre: <span class="required">*</span></span><form:input type = "text" name="name" path="name"/> </label>
-		<span><form:errors path="name" cssStyle="color:#E81505;"></form:errors> </span>
-		<br>
-		<br>
+		<form:errors path="name" cssStyle="color:#E81505;"></form:errors> 
 		
-		<label><span>Marca: <span class="required">*</span></span><form:input type = "text" name="marca" path="marca"/> </label>
-		<span><form:errors path="marca" cssStyle="color:#E81505;"></form:errors> </span>
-		<br>
-		<br>
 		
-		<label><span>Descripci&iacute;on: <span class="required">*</span></span><form:textarea name="description" path="description" rows="3" cols="20"/> </label>
+		<label><span>Marca: <span class="required">*</span></span><form:input type = "text" name="marca" path="marca"/> </label>	
+		<form:errors path="marca" cssStyle="color:#E81505;"></form:errors>
+		
+		<label><span>Descripci&oacute;n: <span class="required">*</span></span><form:textarea name="description" path="description" rows="3" cols="20"/> </label>
 		<span><form:errors path="description" cssStyle="color:#E81505;"></form:errors> </span>
-		<br>
-		<br>
 		
-		<label> Ingrese un nombre de usuario: </label>
-		<form:input type = "text" name="username" path="username"/><br>
+		<label><span>Categor&iacute;a: <span class="required">*</span></span><form:input type="text" name="category" path="category" /> </label>
+		<form:errors path="category" cssStyle="color:#E81505;"></form:errors> 
+	
 		
-		<label> Ingrese una clave: </label>
-		<form:input type = "password" name="password" path="pass"/>
-		<form:errors path="pass" cssStyle="color:#E81505;"></form:errors><br>
-	
-	
-		<label><span></span><input type="submit" value="Agregar usuario"> </label>
-	</form:form>
+		<label><span>Precio: <span class="required">*</span></span><form:input type="number" step="0.01" name="price" path="price" /> </label>
+		<form:errors path="price" cssStyle="color:#E81505;"></form:errors> 
+		
+		
+		
+		<label><span>Fecha de vencimiento:<span class="required">*</span> <span>(dd/mm/yyyy) </span> </span><form:input type="date" name="expirationDate" path="expirationDate" /> </label>
+		<form:errors path="expirationDate" cssStyle="color:#E81505;"></form:errors> 
+
+		<br><br>
+		<label><span></span><input type="submit" value="Agregar producto"> </label>
+		</form:form>
 </div>
 
 

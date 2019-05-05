@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
-import capas.labo4tarea.domain.User;
+import capas.labo4tarea.domain.Product;
 
 @Controller
 public class MainController {
@@ -17,22 +17,21 @@ public class MainController {
 		@RequestMapping("/")
 		public ModelAndView initMain() {
 			ModelAndView mav = new ModelAndView();
-			User usuario = new User();
-			mav.addObject("message", "Bienvenidos a Spring MVC");
-			mav.addObject("user", usuario);
+			Product producto = new Product();
+			mav.addObject("product", producto);
 			mav.setViewName("index");
 			return mav;
 		}
 
-		//Controlador que recibe el usuario
+		//Controlador que recibe el producto
 		@RequestMapping("/formData")
 		@ResponseBody
-		public ModelAndView form(@Valid @ModelAttribute User user, BindingResult result) {
+		public ModelAndView form(@Valid @ModelAttribute Product producto, BindingResult result) {
 			ModelAndView mav = new ModelAndView();
 			if(result.hasErrors()) {
 				mav.setViewName("index");
 			} else {
-				mav.addObject("message", "Persona agregada con &eacute;xito");
+				mav.addObject("message", "Producto agregado con &eacute;xito");
 				mav.setViewName("form");
 			}
 			
