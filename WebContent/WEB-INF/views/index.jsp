@@ -113,7 +113,7 @@
 		
 		
 		
-		<label><span>Fecha de vencimiento:<span class="required">*</span> <span>(dd/mm/yyyy) </span> </span><form:input type="date" name="expirationDate" path="expirationDate" /> </label>
+		<label><span>Fecha de vencimiento:<span class="required">*</span> <span>(dd/mm/yyyy) </span> </span><form:input type="text" name="expirationDate" path="expirationDate"/> </label>
 		<form:errors path="expirationDate" cssStyle="color:#E81505;"></form:errors> 
 
 		<br><br>
