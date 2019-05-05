@@ -31,7 +31,7 @@ public class Product {
 		@DecimalMin(message="El precio no puede ser un valor negativo", value="0.0", inclusive=true)
 		private double price;
 		
-		@DateTimeFormat(pattern = "mm/dd/yyyy")
+		@DateTimeFormat(pattern = "dd/mm/yyyy")
 		@NotNull(message="La fecha de expiración es un campo obligatorio")
 		private Date expirationDate;
 		
